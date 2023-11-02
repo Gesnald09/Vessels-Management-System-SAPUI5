@@ -1,0 +1,36 @@
+<mvc:View controllerName="VesselsManagementSystem1.controller.Add" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core">
+	<Page title="{i18n>addtitle}" showNavButton="true" navButtonPress=".onNavBack">
+		<headerContent>
+			<Select forceSelection="true" change="onChangeLanguage">
+				<core:ListItem key="de" text="Deutsch"/>
+				<core:ListItem key="it" text="Italiano"/>
+				<core:ListItem key="en" text="English"/>
+				<core:ListItem key="es" text="Español"/>
+			</Select>
+		</headerContent>
+		<HBox width="100%">
+			<VBox width="50%" class="sapUiLargeMarginEnd" height="auto">
+				<Input id="inputImo" width="auto" placeholder="{i18n>columnIMO}"/>
+				<Input id="inputName" width="auto" placeholder="{i18n>columnName}"/>
+				<Input id="inputVesseltype" width="auto" placeholder="{i18n>columnVesselstype}"/>
+				<Input id="inputMmsi" width="auto" placeholder="{i18n>columnMMSI}"/>
+				<Input id="inputCallsign" width="auto" placeholder="{i18n>columnCallsign}"/>
+				<ComboBox id="inputCountry" width="auto" placeholder="{i18n>columnHomecountry}" items="{ports>/Ports}">
+				<core:ListItem key="{ports>Country}" text="{ports>Country}"/>
+			</ComboBox>
+			<Input id="inputGrosstonnage" width="auto" placeholder="{i18n>columnGrosstonnage}"/>
+		</VBox>
+		<VBox width="50%" height="auto">
+			<Input id="inputSummerdwt" width="auto" placeholder="{i18n>columnSummerdwt}"/>
+			<Input id="inputLength" width="auto" placeholder="{i18n>columnLength}"/>
+			<Input id="inputWidth" width="auto" placeholder="{i18n>columnWidth}"/>
+			<Input id="inputYearbuilt" width="auto" placeholder="{i18n>columnYearbuilt}"/>
+			<Input id="inputPorttoll" width="auto" placeholder="{i18n>columnPorttoll}"/>
+			<Input id="inputGeneralinfo" width="auto" placeholder="{i18n>columnGeneralinfo}"/>
+			<Input id="inputCurrency" width="auto" placeholder="{i18n>columnCurrency}"/>
+			<Button text="{i18n>addtitle}" press="onAddData1"/>
+		</VBox>
+	</HBox>
+</Page>
+</mvc:View>

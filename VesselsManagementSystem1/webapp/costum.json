@@ -1,0 +1,20 @@
+{
+	"Costum": [
+
+		{
+			
+			"IDC": 1,
+			"IMO": 9635391,
+			"DeparturePort": "Port of Helsinki",
+			"ArrivalDate": "10/23/2023",
+			"EstimateddepartureDate": "10/28/2023",
+			"Days": 5,
+			"Porttoll": 3186.99,
+			"Currency": "USD",
+			"Totalamountoftoll": 15934.95,
+			"Totalamountoftolleur": 15077.07
+			
+		}
+
+	]
+}

@@ -1,0 +1,93 @@
+<mvc:View controllerName="VesselsManagementSystem1.controller.Vessels" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:viz="sap.viz.ui5" xmlns:core="sap.ui.core">
+	<Page title="{i18n>Vesselstext}" showNavButton="true" navButtonPress=".onNavBack">
+		<headerContent>
+			<Select forceSelection="true" change="onChangeLanguage">
+				<core:ListItem key="de" text="Deutsch"/>
+				<core:ListItem key="it" text="Italiano"/>
+				<core:ListItem key="en" text="English"/>
+				<core:ListItem key="es" text="Español"/>
+			</Select>
+			<Button text="{i18n>ExporttoexcelText}" press="onExportToExcel" icon="sap-icon://excel-attachment"/>
+		</headerContent>
+		<Table id="Vessels" headerText="{i18n>vesselsListTitle}" class="sapUiResponsiveMargin" width="auto"
+			items="{ path: 'vessels>/Vessels', sorter:{ path: 'Country', group:true } }" xmlns:html="http://www.w3.org/1999/xhtml">
+			<headerToolbar>
+				<Toolbar>
+					<Button id="addData" text="{i18n>addtitle}" icon="sap-icon://add" press=".onNavii" class="sapUiSmallMarginEnd sapUiVisibleOnlyOnDesktop"/>
+					<ToolbarSpacer/>
+					<SearchField width="50%" search="onFilterVessels" placeholder="{i18n>showHelloButtonText}"/>
+				</Toolbar>
+			</headerToolbar>
+			<columns>
+				<Column>
+					<Text text="{i18n>columnIMO}"/>
+				</Column>
+				<Column>
+					<Text text="{i18n>columnName}"/>
+				</Column>
+				<Column>
+					<Text text="{i18n>columnVesselstype}"/>
+				</Column>
+				<Column>
+					<Text text="{i18n>columnMMSI}"/>
+				</Column>
+				<Column hAlign="End" minScreenWidth="Small" demandPopin="true">
+					<Text text="{i18n>columnCallsign}"/>
+				</Column>
+				<Column>
+					<Text text="{i18n>columnFlag}"/>
+				</Column>
+				<Column>
+					<Text text="{i18n>columnHomecountry}"/>
+				</Column>
+				<Column hAlign="End" minScreenWidth="Small" demandPopin="true">
+					<Text text="{i18n>columnGrosstonnage}"/>
+				</Column>
+				<Column hAlign="End" minScreenWidth="Small" demandPopin="true">
+					<Text text="{i18n>columnSummerdwt}"/>
+				</Column>
+				<Column hAlign="End" minScreenWidth="Small" demandPopin="true">
+					<Text text="{i18n>columnLength}"/>
+				</Column>
+				<Column hAlign="End" minScreenWidth="Small" demandPopin="true">
+					<Text text="{i18n>columnWidth}"/>
+				</Column>
+				<Column hAlign="End" minScreenWidth="Small" demandPopin="true">
+					<Text text="{i18n>columnYearbuilt}"/>
+				</Column>
+				<Column hAlign="End" minScreenWidth="Small" demandPopin="true">
+					<Text text="{i18n>columnPorttoll}"/>
+				</Column>
+				<Column hAlign="End" minScreenWidth="Small" demandPopin="true">
+					<Text text="{i18n>columnPollutiontoll}"/>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem type="Navigation" press=".onNavi">
+					<cells>
+						<ObjectIdentifier title="{vessels>IMO}"/>
+						<Text text="{vessels>Name}"/>
+						<Text text="{vessels>Vesselstype}"/>
+						<ObjectNumber number="{vessels>MMSI}" emphasized="fasle"/>
+						<Text text="{vessels>Callsign}"/>
+						<Image src="{vessels>Flagspicture}" width="{vessels>FlagspictureWidth}" height="{vessels>FlagspictureHeight}"/>
+						<Text text="{vessels>Country}"/>
+						<ObjectNumber number="{vessels>Grosstonnage}" emphasized="false"/>
+						<ObjectNumber number="{vessels>Summerdwt}" emphasized="fasle"/>
+						<ObjectNumber number="{vessels>Length}" emphasized="fasle"/>
+						<ObjectNumber number="{vessels>Width}" emphasized="fasle"/>
+						<ObjectNumber number="{vessels>YearBuilt}" emphasized="fasle"/>
+						<ObjectNumber
+							number="{ parts: [{path: 'vessels>Porttoll'}, {path: 'vessels>Currency'}], type: 'sap.ui.model.type.Currency', formatOptions: { showMeasure: false } }"
+							unit="{vessels>Currency}" id="objectNumber" state="{= ${vessels>Length} > 125 ? 'Error' : 'Success'}"/>
+						<Text text="{ path: 'vessels>YearBuilt', formatter: '.formatter.statusText' }"/>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+		<content>
+			<viz:Pie id="vizPie" visible="true" width="30%"/>
+		</content>
+	</Page>
+</mvc:View>

@@ -1,0 +1,33 @@
+<mvc:View controllerName="VesselsManagementSystem1.controller.Addcostum" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core">
+	<Page title="{i18n>addtitle}" showNavButton="true" navButtonPress=".onNavBack1" class="login-box2">
+		<headerContent>
+			<Select forceSelection="true" change="onChangeLanguage">
+				<core:ListItem key="de" text="Deutsch"/>
+				<core:ListItem key="it" text="Italiano"/>
+				<core:ListItem key="en" text="English"/>
+				<core:ListItem key="es" text="Español"/>
+			</Select>
+		</headerContent>
+		<HBox class="login-box4">
+			<VBox class="login-box5" height="70%">
+				<ComboBox id="imoComboBox" width="auto" placeholder="{i18n>columnIMO}" items="{vessels>/Vessels}" change="calculate">
+					<core:ListItem key="{vessels>IMO}" text="{vessels>IMO}"/>
+				</ComboBox>
+				<ComboBox id="inputDepartureport" width="auto" placeholder="{i18n>columnDepartureport}" items="{ports>/Ports}" change="calculate">
+					<core:ListItem key="{ports>PortsName}" text="{ports>PortsName}"/>
+				</ComboBox>
+				<DatePicker id="startDatePicker" placeholder="{i18n>columnArrivaldate}"/>
+				<DatePicker id="endDatePicker" change="calculate" placeholder="{i18n>columnETD}"/>
+				<Input id="numdaysid" value="{i18n>columnDays}: {/numDays}" enabled="false"/>
+			</VBox>
+			<VBox class="login-box6">
+				<Input id="porttollInput" value="{i18n>columnPorttoll}" enabled="false"/>
+				<Input id="currencyInput" enabled="false" value="{i18n>columnCurrency}"/>
+				<Input id="totalamountInput" enabled="false" value="{i18n>columnTotalamountoftoll}"/>
+				<Input id="totalamounteurInput" enabled="false" value="{i18n>columnTotalamountoftolleur}"/>
+				<Button text="{i18n>addcostumtitle}" press="onAddcost"/>
+			</VBox>
+		</HBox>
+	</Page>
+</mvc:View>

@@ -1,0 +1,88 @@
+.login-box {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 80px;
+    border: 30px solid #ccc;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+}
+
+.main-login {
+    background-image: url('port5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.formvbox {
+    text-align: center;
+}
+
+.createaccountlink {
+    padding-top: 20px;
+}
+
+#myCarousel {
+    display: block;
+}
+
+.login-box1 {
+    border: 30px solid #ccc;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.login-box2 {
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.red-text {
+    color: red;
+}
+
+.custom-message-toast.sapMMessageToast {
+    background-color: red;
+    /* Background color */
+    color: white;
+    /* Text color */
+}
+
+.login-box4 {
+    width: 70%;
+    length: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 80px;
+    border: 30px solid #ccc;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+}
+
+.login-box5 {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    background-image: url('shipsymbol.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.login-box6 {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    background-image: url('bordersymbol.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}

@@ -1,0 +1,49 @@
+{
+	"Ports": [
+
+		{
+
+			"Idh": 1,
+			"PortsName": "Rostock Port",
+			"Country": "Germany [DE]",
+			"NoofTerminals": 7,
+			"TimeZone": "Europe/Berlin"
+		},
+
+		{
+
+			"Idh": 2,
+			"PortsName": "Antigua and Barbuda Port",
+			"Country": "Antigua Barbuda [AG]",
+			"NoofTerminals": 11,
+			"TimeZone": "America/New_York"
+		},
+
+		{
+
+			"Idh": 3,
+			"PortsName": "Port of Helsinki",
+			"Country": "Finland [FI]",
+			"NoofTerminals": 9,
+			"TimeZone": "Europe/Berlin"
+		},
+
+		{
+
+			"Idh": 4,
+			"PortsName": "Marshall Is Port",
+			"Country": "Marshall Is [MH]",
+			"NoofTerminals": 14,
+			"TimeZone": "Pacific/Majuro"
+		},
+		{
+
+			"Idh": 5,
+			"PortsName": "Hong Kong Port",
+			"Country": "Hong Kong [HK]",
+			"NoofTerminals": 22,
+			"TimeZone": "Asia/Hong_Kong"
+		}
+
+	]
+}

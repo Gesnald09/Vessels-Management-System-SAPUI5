@@ -1,0 +1,35 @@
+{
+	"Users": [
+
+		{
+			"Name": "User1",
+			"Surname": "USER1",
+			"DOB": "01/01/1001",
+			"Email": "User1.USER1@iemail.com",
+			"Username": "Admin1",
+			"Password": "Admin1",
+			"Password1": "Admin1"
+
+		},
+
+		{
+
+			"Name": "User2",
+			"Surname": "USER2",
+			"DOB": "01/01/1002",
+			"Email": "User2.USER2@iemail.com",
+			"Username": "Admin2",
+			"Password": "Admin2",
+			"Password1": "Admin2"
+
+		}, {
+			"Name": "User3",
+			"Surname": "USER3",
+			"DOB": "01/01/1003",
+			"Email": "User3.USER3@iemail.com",
+			"Username": "Admin3",
+			"Password": "Admin3",
+			"Password1": "Admin3"
+		}
+	]
+}

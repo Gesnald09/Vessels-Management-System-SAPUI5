@@ -1,0 +1,32 @@
+<mvc:View controllerName="VesselsManagementSystem1.controller.View1" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core">
+	<Page title="{i18n>title}" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified" xmlns:unified="sap.ui.unified">
+		<headerContent>
+			<Button text="Open Calendar" press="toggleCalendarVisibility" id="dateText2" icon="sap-icon://appointment-2"/>
+			<Text id="timeText"/>
+			<Button icon="sap-icon://hello-world" press=".onOpenDialog"/>
+			<Select forceSelection="true" change="onChangeLanguage">
+				<core:ListItem key="de" text="Deutsch"/>
+				<core:ListItem key="it" text="Italiano"/>
+				<core:ListItem key="en" text="English"/>
+				<core:ListItem key="es" text="Español"/>
+			</Select>
+		</headerContent>
+		<u:Calendar id="calendarId" selectedDate="{/selectedDate}" startDate="{/startDate}" endDate="{/endDate}" visible="false"
+				select="openNoteDialog" width="10%" height="10%"/>
+		<content>
+			<OverflowToolbar>
+				<Button text="{i18n>VesselsListTitle}" press=".onNavItemSelect1"/>
+				<Button text="{i18n>PortsText}" press=".onNavItemSelect2"/>
+				<Button text="{i18n>LoginginText}" press=".onNavItemSelect" icon="sap-icon://visits"/>
+			</OverflowToolbar>
+			<mvc:XMLView viewName="VesselsManagementSystem1.view.Searchpanel"/>
+				<Carousel id="myCarousel">
+					<Image src="hamburgport.png"/>
+					<Image src="palermoport.png"/>
+					<Image src="rostockport1.png"/>
+					<Image src="southampton.png"/>
+					<Image src="shanghaiport.png"/>
+				</Carousel>
+		</content>
+	</Page>
+</mvc:View>

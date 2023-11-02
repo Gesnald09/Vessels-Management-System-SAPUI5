@@ -1,0 +1,23 @@
+<mvc:View controllerName="VesselsManagementSystem1.controller.Adduser" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core">
+	<Page title="{i18n>addtitle}" showNavButton="true" navButtonPress=".onNavBack" class="login-box2">
+		<headerContent>
+			<Select forceSelection="true" change="onChangeLanguage">
+				<core:ListItem key="de" text="Deutsch"/>
+				<core:ListItem key="it" text="Italiano"/>
+				<core:ListItem key="en" text="English"/>
+				<core:ListItem key="es" text="Español"/>
+			</Select>
+		</headerContent>
+			<VBox class="sapUiLargeMarginEnd login-box1" height="auto">
+				<Input id="inputName" width="auto" placeholder="{i18n>NameText}"/>
+				<Input id="inputSurname" width="auto" placeholder="{i18n>SurnameText}"/>
+				<DatePicker id="inputDOB" placeholder="{i18n>DobText}" width="151px"/>
+				<Input id="inputUsername" width="auto" placeholder="{i18n>UsernameText}"/>
+				<Input id="inputEmail" width="auto" placeholder="Email"/>
+				<Input id="inputPassword" type="Password" width="auto" placeholder="{i18n>PasswordText}"/>
+				<Input id="inputPassword1" type="Password" width="auto" placeholder="{i18n>Password1Text}"/>
+				<Button text="{i18n>RegisterText}" press="onRegister"/>
+			</VBox>
+	</Page>
+</mvc:View>

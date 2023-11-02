@@ -1,0 +1,32 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:form="sap.ui.layout.form"
+	controllerName="VesselsManagementSystem1.controller.Login" xmlns:m="sap.m" xmlns:core="sap.ui.core" xmlns:viz="sap.viz.ui5"
+	class="main-login">
+	<App>
+		<pages>
+			<Page title="{i18n>LoginText}" showNavButton="true" navButtonPress=".onNavBack">
+				<headerContent>
+					<Text id="dateText"></Text>
+					<Text id="timeText"></Text>
+					<Select forceSelection="true" change="onChangeLanguage">
+						<core:ListItem key="de" text="Deutsch"/>
+						<core:ListItem key="it" text="Italiano"/>
+						<core:ListItem key="en" text="English"/>
+						<core:ListItem key="es" text="Español"/>
+					</Select>
+				</headerContent>
+				<content>
+					<form:SimpleForm class="login-box">
+						<form:content>
+							<Input id="username" placeholder="{i18n>UsernameText}"></Input>
+							<Input id="password" placeholder="{i18n>PasswordText}" type="Password"></Input>
+						</form:content>
+						<VBox class="formvbox">
+							<Button text="{i18n>LoginginText}" icon="sap-icon://visits" type="Accept" press="onLogin"></Button>
+							<m:Link text="{i18n>CreateaccountText}" press="onNavi3" class="createaccountlink"/>
+						</VBox>
+					</form:SimpleForm>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

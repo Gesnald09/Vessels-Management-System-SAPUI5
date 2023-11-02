@@ -1,0 +1,16 @@
+<mvc:View controllerName="VesselsManagementSystem1.controller.View1" 
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<Panel headerText="{i18n>helloPanelTitle}" width="auto" class="sapUiResponsiveMargin" 
+		   expandable="{device>/system/phone}"
+		   expand="{= !${device/system/phone}}">
+		<content>
+			<Button text="{i18n>showHelloButtonText}" press=".onButtonClick" 
+					icon="sap-icon://world" class="sapUiSmallMarginEnd"/>
+			<Button id="helloDialogButton" text="{i18n>openDialogText}" icon="sap-icon://bar-code"
+					press=".onOpenDialog" class="sapUiSmallMarginEnd sapUiVisibleOnlyOnDesktop"/>
+			<Input value="{/recipient/name}" description="{i18n>showHelloButtonText} {/recipient/name}"
+				   valueLiveUpdate="true" width="60%"/>
+		</content>
+	</Panel>
+</mvc:View>

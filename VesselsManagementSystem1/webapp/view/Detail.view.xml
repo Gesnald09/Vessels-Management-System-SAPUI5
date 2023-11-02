@@ -1,0 +1,35 @@
+<mvc:View controllerName="VesselsManagementSystem1.controller.Detail" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core">
+	<Page title="{i18n>detailPageTitle}" showNavButton="true" navButtonPress=".onNavBack">
+		<headerContent>
+			<Button icon="sap-icon://nav-back" press=".onNavBack"/>
+			<Select forceSelection="true" change="onChangeLanguage">
+				<core:ListItem key="de" text="Deutsch"/>
+				<core:ListItem key="it" text="Italiano"/>
+				<core:ListItem key="en" text="English"/>
+				<core:ListItem key="es" text="Español"/>
+			</Select>
+		</headerContent>
+		<content>
+			<Table>
+				<columns>
+					<Column>
+						<Text text="General Info" class="sapUiLargeMarginBeginEnd"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>vesselspicture}" class="sapUiLargeMarginBeginEnd"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text text="{vessels>text}" class="sapUiSmallMarginBeginEnd"/>
+							<Image src="{vessels>Vesselspicture}" width="{vessels>vesselspictureWidth}" height="{vessels>VesselspictureHeight}"
+								class="sapUiLargeMarginBeginEnd"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Page>
+</mvc:View>

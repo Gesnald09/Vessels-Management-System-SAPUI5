@@ -1,0 +1,76 @@
+<mvc:View controllerName="VesselsManagementSystem1.controller.Costum" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:viz="sap.viz.ui5" xmlns:core="sap.ui.core">
+	<Page title="{i18n>Costumtext}">
+		<headerContent>
+			<Button text="Open Calendar" press="toggleCalendarVisibility" id="dateText2" icon="sap-icon://appointment-2"/>
+			<Text id="timeText"/>
+			<Select forceSelection="true" change="onChangeLanguage">
+				<core:ListItem key="de" text="Deutsch"/>
+				<core:ListItem key="it" text="Italiano"/>
+				<core:ListItem key="en" text="English"/>
+				<core:ListItem key="es" text="Español"/>
+			</Select>
+			<Button text="{i18n>ExporttoexcelText}" press="onExportToExcel" icon="sap-icon://excel-attachment"/>
+			<Button text="{i18n>SignoutText}" press=".onNavBack" icon="sap-icon://log"/>
+		</headerContent>
+		<Table id="Costum" headerText="{i18n>costumListTitle}" class="sapUiResponsiveMargin" width="auto"
+			items="{ path: 'costum>/Costum', sorter:{ path: 'ArrivalDate', group:true } }" xmlns:html="http://www.w3.org/1999/xhtml">
+			<headerToolbar>
+				<Toolbar>
+					<Button id="addcostum" text="{i18n>addcostumtitle}" icon="sap-icon://add" press=".onNavii"
+						class="sapUiSmallMarginEnd sapUiVisibleOnlyOnDesktop"/>
+					<ToolbarSpacer/>
+					<SearchField width="50%" search="onFilterCostum" placeholder="{i18n>showHelloButtonText}"/>
+				</Toolbar>
+			</headerToolbar>
+			<columns>
+				<Column>
+					<Text text="IDC"/>
+				</Column>
+				<Column>
+					<Text text="{i18n>columnIMO}"/>
+				</Column>
+				<Column>
+					<Text text="{i18n>columnDepartureport}"/>
+				</Column>
+				<Column>
+					<Text text="{i18n>columnArrivaldate}"/>
+				</Column>
+				<Column>
+					<Text text="{i18n>columnETD}"/>
+				</Column>
+				<Column>
+					<Text text="{i18n>columnDays}"/>
+				</Column>
+				<Column>
+					<Text text="{i18n>columnPorttoll}"/>
+				</Column>
+				<Column>
+					<Text text="{i18n>columnCurrency}"/>
+				</Column>
+				<Column>
+					<Text text="{i18n>columnTotalamountoftoll}"/>
+				</Column>
+				<Column>
+					<Text text="{i18n>columnTotalamountoftolleur}"/>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem>
+					<cells>
+						<ObjectIdentifier title="{costum>IDC}"/>
+						<ObjectNumber number="{costum>IMO}" emphasized="fasle"/>
+						<Text text="{costum>DeparturePort}"/>
+						<Text text="{costum>ArrivalDate}"/>
+						<Text text="{costum>EstimateddepartureDate}"/>
+						<ObjectNumber number="{costum>Days}" emphasized="false"/>
+						<ObjectNumber number="{costum>Porttoll}" emphasized="fasle"/>
+						<Text text="{costum>Currency}"/>
+						<ObjectNumber number="{costum>Totalamountoftoll}" emphasized="fasle"/>
+						<ObjectNumber number="{costum>Totalamountoftolleur}" emphasized="fasle"/>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	</Page>
+</mvc:View>
